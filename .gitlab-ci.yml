@@ -6,7 +6,7 @@ build:
     - apt-get -y install iverilog
     - apt-get -y install yosys
     - conda env create -f environment.yml
-    - conda activate myhdl
+    - source activate myhdl
   script:
     - cd ./verif/
     - python testbench.py
