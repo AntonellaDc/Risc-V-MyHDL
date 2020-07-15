@@ -10,6 +10,8 @@ build:
   script:
     - cd ./verif/
     - python testbench.py
+    - cd ../verif_rtl/
+    - python testbench_cosim.py
     ##- iverilog -o localization -c ../../rtl/filelist.f -g 2005
     ##- vvp localization
     ##- cd ../../syn/
