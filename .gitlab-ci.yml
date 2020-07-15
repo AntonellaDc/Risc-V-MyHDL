@@ -1,0 +1,15 @@
+build:
+  image: ubuntu:16.04
+  stage: build
+  before_script:
+    - apt-get update
+    - apt-get -y install iverilog
+    - apt-get -y install yosys
+  script:
+    - cd ./verif/
+    - make sim
+    ##- iverilog -o localization -c ../../rtl/filelist.f -g 2005
+    ##- vvp localization
+    ##- cd ../../syn/
+    ##- yosys -s yosys_script
+    
