@@ -3,11 +3,14 @@ build:
   stage: build
   before_script:
     - apt-get update
+    - apt-get -y install conda
     - apt-get -y install iverilog
     - apt-get -y install yosys
+    - conda env create -f environment.yml
+    - conda activate myhdl
   script:
     - cd ./verif/
-    - make sim
+    - python testbench.py
     ##- iverilog -o localization -c ../../rtl/filelist.f -g 2005
     ##- vvp localization
     ##- cd ../../syn/
