@@ -1,0 +1,14 @@
+# read design 
+read_verilog ../rtl/localization_top.sv
+read_verilog ../rtl/filter_unit.sv
+read_verilog ../rtl/predict/predict_stage.sv
+read_verilog ../rtl/resample/resample_stage.sv
+read_verilog ../rtl/update/update_stage.sv
+read_verilog ../rtl/update/exponential/exponential.sv
+read_verilog ../rtl/update/exponential/exponential_v2.sv
+
+# generic synthesis
+synth -top localization_top
+
+#
+tee -o stat.txt stat
