@@ -1,8 +1,8 @@
 # read design 
-read_verilog ../rtl/riscv_alu.v
+read_verilog ../verif/riscv_alu.v
 
 # generic synthesis
 synth -top riscv_alu
 
 #
-tee -o stat.txt stat
+tee -o stat_ag.txt stat
