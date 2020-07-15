@@ -16,6 +16,7 @@ def _testbench():
     rst = Signal(True)
     aluIO = ALUPortIO()
     dut = riscv_alu(io_iface=aluIO)
+    dut = toVerilog(dut,aluIO)
 
     halfperiod = delay(5)
 

@@ -1,2 +1,2 @@
 ./testbench.sv
-../../rtl/riscv_alu.v
+../rtl/riscv_alu.v
