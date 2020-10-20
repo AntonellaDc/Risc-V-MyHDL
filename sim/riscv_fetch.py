@@ -1,3 +1,2 @@
 from myhdl import *
 
-g
